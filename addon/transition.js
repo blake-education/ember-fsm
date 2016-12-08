@@ -2,6 +2,7 @@ import Ember from 'ember';
 import { withPromise, bind } from './utils';
 
 const {
+  RSVP,
   RSVP: { Promise },
   computed,
   inspect,
