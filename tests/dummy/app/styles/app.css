@@ -1,0 +1,91 @@
+body {
+  font-family: sans-serif;
+}
+
+[role="navigation"] {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+/**
+ * Traffic light demo
+ */
+
+.traffic-signal__signal {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style: none;
+  width: 6rem;
+  margin: 2rem 0;
+  padding: 0.5rem;
+  background: #222;
+  border: 0.2rem solid black;
+  border-radius: 4rem;
+}
+
+.traffic-signal__light {
+  position: relative;
+  color: transparent;
+  margin: 0.5rem auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.traffic-signal__light--green {
+  background: green;
+}
+
+.traffic-signal__light--amber {
+  background: gold;
+}
+
+.traffic-signal__light--red {
+  background: red;
+}
+
+.green-active .traffic-signal__light--green {
+  opacity: 1;
+  box-shadow: 0 0 2.5rem 0 green;
+}
+
+.amber-active .traffic-signal__light--amber {
+  opacity: 1;
+  box-shadow: 0 0 2.5rem 0 gold;
+}
+
+.red-active .traffic-signal__light--red {
+  opacity: 1;
+  box-shadow: 0 0 2.5rem 0 red;
+}
+
+.off-active .traffic-signal__light--amber {
+  animation: 2s flash infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 2.5rem 0 gold;
+  }
+
+  50% {
+    opacity: 0.3;
+    box-shadow: none;
+  }
+
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 2.5rem 0 gold;
+  }
+}

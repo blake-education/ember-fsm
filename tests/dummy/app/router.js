@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('traffic-signal');
+  this.route('stateful-mixin');
 });
 
 export default Router;
