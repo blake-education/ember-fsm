@@ -1,0 +1,11 @@
+<p>
+  <button {{action "powerDown"}}>Off</button>
+  <button {{action "powerUp"}}>On</button>
+  <button {{action "cycle"}}>Cycle</button>
+</p>
+
+<ol class="traffic-signal__signal {{state}}-active">
+  <li class="traffic-signal__light traffic-signal__light--green">green</li>
+  <li class="traffic-signal__light traffic-signal__light--amber">amber</li>
+  <li class="traffic-signal__light traffic-signal__light--red">red</li>
+</ol>
